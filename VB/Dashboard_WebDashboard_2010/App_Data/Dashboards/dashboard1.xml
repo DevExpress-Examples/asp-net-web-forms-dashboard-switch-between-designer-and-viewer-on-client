@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Energy Statistics" />
+  <DataSources>
+    <SqlDataSource ComponentName="sqlDataSource1">
+      <Name>XML Data Source</Name>
+      <Connection Name="sqlConnection" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="Countries">
+        <Tables>
+          <Table Name="Countries" />
+        </Tables>
+        <Columns>
+          <Column Table="Countries" Name="Country" />
+          <Column Table="Countries" Name="Latitude" />
+          <Column Table="Countries" Name="Longitude" />
+          <Column Table="Countries" Name="Year" />
+          <Column Table="Countries" Name="EnergyType" />
+          <Column Table="Countries" Name="Production" />
+          <Column Table="Countries" Name="Import" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <PieMap ComponentName="pieMapDashboardItem1" Name="Energy Statistics by Country" DataSource="sqlDataSource1" DataMember="Countries" ShapefileArea="Europe" ShapeTitleAttributeName="NAME">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Latitude" UniqueName="DataItem0" />
+        <Dimension DataMember="Longitude" UniqueName="DataItem1" />
+        <Measure DataMember="Production" UniqueName="DataItem2" />
+        <Dimension DataMember="EnergyType" UniqueName="DataItem3" />
+        <Measure DataMember="Import" UniqueName="DataItem4" />
+        <Dimension DataMember="Country" UniqueName="DataItem5" />
+      </DataItems>
+      <ViewArea TopLatitude="70.75215006928579" BottomLatitude="29.72603040307084" LeftLongitude="-37.5292795647808" RightLongitude="52.4952030286303" CenterPointLatitude="55.161216434780705" CenterPointLongitude="7.4829617319247506" />
+      <MapLegend Visible="true" />
+      <WeightedLegend Visible="true" Position="BottomLeft" />
+      <Latitude UniqueName="DataItem0" />
+      <Longitude UniqueName="DataItem1" />
+      <TooltipDimensions>
+        <TooltipDimension UniqueName="DataItem5" />
+      </TooltipDimensions>
+      <Argument UniqueName="DataItem3" />
+      <Values>
+        <Value UniqueName="DataItem2" />
+        <Value UniqueName="DataItem4" />
+      </Values>
+    </PieMap>
+    <Grid ComponentName="gridDashboardItem1" Name="Energy Statistics by Country" DataSource="sqlDataSource1" DataMember="Countries">
+      <DataItems>
+        <Dimension DataMember="Country" UniqueName="DataItem0" />
+        <Measure DataMember="Production" UniqueName="DataItem1" />
+        <Measure DataMember="Import" UniqueName="DataItem2" />
+        <Dimension DataMember="Year" UniqueName="DataItem3" />
+        <Measure DataMember="Production" UniqueName="DataItem4" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+        <GridSparklineColumn Name="Trend">
+          <SparklineValue UniqueName="DataItem4" />
+        </GridSparklineColumn>
+      </GridColumns>
+      <SparklineArgument UniqueName="DataItem3" />
+      <GridOptions />
+    </Grid>
+    <Card ComponentName="cardDashboardItem1" Name="Energy Statistics by Type - Production vs Import" DataSource="sqlDataSource1" DataMember="Countries">
+      <DataItems>
+        <Measure DataMember="Production" UniqueName="DataItem0" />
+        <Dimension DataMember="EnergyType" TopNEnabled="true" TopNCount="3" TopNMeasure="DataItem0" UniqueName="DataItem1" />
+        <Measure DataMember="Import" UniqueName="DataItem2" />
+        <Measure DataMember="Import" UniqueName="DataItem3" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem1" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue UniqueName="DataItem0" />
+        <TargetValue UniqueName="DataItem3" />
+        <DeltaOptions ValueType="ActualValue" ResultIndicationMode="WarningIfLess" />
+      </Card>
+    </Card>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup>
+        <LayoutGroup>
+          <LayoutGroup Orientation="Vertical" Weight="115.16325401217488">
+            <LayoutItem DashboardItem="pieMapDashboardItem1" />
+          </LayoutGroup>
+          <LayoutGroup Orientation="Vertical" Weight="84.836745987825125">
+            <LayoutItem DashboardItem="cardDashboardItem1" Weight="95.428571428571431" />
+            <LayoutItem DashboardItem="gridDashboardItem1" Weight="104.57142857142857" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

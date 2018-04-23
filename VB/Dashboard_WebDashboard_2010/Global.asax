@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.vb" Inherits="Dashboard_WebDashboard_2010.Global" Language="vb" %>
