@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Energy Statistics" />
+  <Items>
+    <PieMap ComponentName="pieMapDashboardItem1" Name="Energy Statistics by Country" DataSource="sqlDataSource1" DataMember="Countries" ShapefileArea="Europe" ShapeTitleAttributeName="NAME">
+      <DataItems>
+        <Dimension DataMember="Latitude" UniqueName="DataItem0" />
+        <Dimension DataMember="Longitude" UniqueName="DataItem1" />
+        <Measure DataMember="Production" UniqueName="DataItem2" />
+        <Dimension DataMember="EnergyType" UniqueName="DataItem3" />
+        <Measure DataMember="Import" UniqueName="DataItem4" />
+        <Dimension DataMember="Country" UniqueName="DataItem5" />
+      </DataItems>
+      <ViewArea TopLatitude="69.58629816267401" BottomLatitude="32.665992457832225" LeftLongitude="-31.965929235356057" RightLongitude="46.931852699205564" CenterPointLatitude="55.161216434780705" CenterPointLongitude="7.482961731924751" />
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <Latitude UniqueName="DataItem0" />
+      <Longitude UniqueName="DataItem1" />
+      <TooltipDimensions>
+        <TooltipDimension UniqueName="DataItem5" />
+      </TooltipDimensions>
+      <Argument UniqueName="DataItem3" />
+      <Values>
+        <Value UniqueName="DataItem2" />
+        <Value UniqueName="DataItem4" />
+      </Values>
+      <MapLegend Visible="true" />
+      <WeightedLegend Visible="true" Position="BottomLeft" />
+    </PieMap>
+    <Grid ComponentName="gridDashboardItem1" Name="Energy Statistics by Country" DataSource="sqlDataSource1" DataMember="Countries">
+      <DataItems>
+        <Dimension DataMember="Country" UniqueName="DataItem0" />
+        <Measure DataMember="Production" UniqueName="DataItem1" />
+        <Measure DataMember="Import" UniqueName="DataItem2" />
+        <Dimension DataMember="Year" UniqueName="DataItem3" />
+        <Measure DataMember="Production" UniqueName="DataItem4" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+        <GridMeasureColumn>
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+        <GridSparklineColumn Name="Trend">
+          <SparklineValue UniqueName="DataItem4" />
+        </GridSparklineColumn>
+      </GridColumns>
+      <SparklineArgument UniqueName="DataItem3" />
+    </Grid>
+    <Card ComponentName="cardDashboardItem1" Name="Energy Statistics by Type - Production vs Import" DataSource="sqlDataSource1" DataMember="Countries">
+      <DataItems>
+        <Measure DataMember="Production" UniqueName="DataItem0" />
+        <Dimension DataMember="EnergyType" UniqueName="DataItem1" TopNEnabled="true" TopNCount="3" TopNMeasure="DataItem0" />
+        <Measure DataMember="Import" UniqueName="DataItem2" />
+        <Measure DataMember="Import" UniqueName="DataItem3" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem1" />
+      </SeriesDimensions>
+      <Card>
+          <DeltaOptions ValueType="ActualValue" ResultIndicationMode="WarningIfLess" />
+          <ActualValue UniqueName="DataItem0" />
+          <TargetValue UniqueName="DataItem3" />
+        </Card>
+    </Card>
+  </Items>
+  <DataSources>
+    <SqlDataSource ComponentName="sqlDataSource1">
+      <Connection Name="connection" ProviderKey="InMemorySetFull">
+        <Parameters>
+          <Parameter Name="database" Value="D:\Projects\Code Central\15.2\Web Designer\Dashboard_WebDesigner\Dashboard_WebDesigner\App_Data\DashboardEnergyStatictics.xml" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+        </Parameters>
+      </Connection>
+      <Query Type="TableQuery" Name="Countries">
+          <Table Name="Countries">
+            <Column Name="Country" />
+            <Column Name="Latitude" />
+            <Column Name="Longitude" />
+            <Column Name="Year" />
+            <Column Name="EnergyType" />
+            <Column Name="Production" />
+            <Column Name="Import" />
+          </Table>
+        </Query>
+      <Name>XML Data Source</Name>
+    </SqlDataSource>
+  </DataSources>
+  
+  
+  
+  
+  
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+        <LayoutGroup>
+            <LayoutGroup>
+                <LayoutGroup Weight="115.16325401217487" Orientation="Vertical">
+                    <LayoutItem DashboardItem="pieMapDashboardItem1" />
+                  </LayoutGroup><LayoutGroup Weight="84.83674598782513" Orientation="Vertical">
+                    <LayoutItem Weight="95.42857142857143" DashboardItem="cardDashboardItem1" /><LayoutItem Weight="104.57142857142857" DashboardItem="gridDashboardItem1" />
+                  </LayoutGroup>
+              </LayoutGroup>
+          </LayoutGroup>
+      </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
