@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Global.asax.cs](./CS/Dashboard_WebDesigner_2010/Global.asax.cs) (VB: [Global.asax.vb](./VB/Dashboard_WebDesigner_2010/Global.asax.vb))
+* [Global.asax.cs](./CS/Dashboard_WebDesigner_2010/Global.asax.cs) (VB: [Global.asax.vb](./VB/Dashboard_WebDesigner_2010/Global.asax.vb))
+* [WebForm1.aspx](./CS/Dashboard_WebDesigner_2010/WebForm1.aspx) (VB: [WebForm1.aspx](./VB/Dashboard_WebDesigner_2010/WebForm1.aspx))
+* [WebForm1.aspx](./CS/Dashboard_WebDesigner_2010/WebForm1.aspx) (VB: [WebForm1.aspx](./VB/Dashboard_WebDesigner_2010/WebForm1.aspx))
+<!-- default file list end -->
 # How to create a Web Dashboard Designer application
 
 
