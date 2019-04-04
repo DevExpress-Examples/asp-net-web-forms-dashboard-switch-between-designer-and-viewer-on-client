@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [WebForm1.aspx](./CS/Dashboard_WebDashboard_2010/WebForm1.aspx) (VB: [WebForm1.aspx](./VB/Dashboard_WebDashboard_2010/WebForm1.aspx))
-* [WebForm1.aspx.cs](./CS/Dashboard_WebDashboard_2010/WebForm1.aspx.cs) (VB: [WebForm1.aspx](./VB/Dashboard_WebDashboard_2010/WebForm1.aspx))
+* [WebForm1.aspx.cs](./CS/Dashboard_WebDashboard_2010/WebForm1.aspx.cs) (VB: [WebForm1.aspx.vb](./VB/Dashboard_WebDashboard_2010/WebForm1.aspx.vb))
 <!-- default file list end -->
 # How to create a Web Dashboard Designer application
 
