@@ -10,33 +10,33 @@
 Namespace Dashboard_WebDashboard_2010
 
 
-    Partial Public Class WebForm1
+	Partial Public Class WebForm1
 
-        ''' <summary>
-        ''' form1 control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+		''' <summary>
+		''' form1 control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
-        ''' <summary>
-        ''' ASPxButton1 control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected ASPxButton1 As Global.DevExpress.Web.ASPxButton
+		''' <summary>
+		''' ASPxButton1 control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected ASPxButton1 As Global.DevExpress.Web.ASPxButton
 
-        ''' <summary>
-        ''' ASPxDashboard1 control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected ASPxDashboard1 As Global.DevExpress.DashboardWeb.ASPxDashboard
-    End Class
+		''' <summary>
+		''' ASPxDashboard1 control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected ASPxDashboard1 As Global.DevExpress.DashboardWeb.ASPxDashboard
+	End Class
 End Namespace
