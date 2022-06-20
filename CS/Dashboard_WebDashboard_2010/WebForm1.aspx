@@ -13,26 +13,13 @@
             overflow: hidden;  
         }
     </style>
-    <script type="text/javascript">
-        function onClick(s, e) {
-            var workingMode = webDashboard.GetWorkingMode();
-
-            if (workingMode == 'designer') {
-                webDashboard.SwitchToViewer();
-                button.SetText('Switch to Designer');
-            }
-            else {
-                webDashboard.SwitchToDesigner();
-                button.SetText('Switch to Viewer');
-            }
-        }
-    </script>
+    <script src="Scripts/custom-script.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
         <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Switch to Viewer" 
             ClientInstanceName="button" AutoPostBack="False">
-            <ClientSideEvents Click="onClick" />
+            <ClientSideEvents Click="switchMode" />
         </dx:ASPxButton>
         <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" Height="100%" ClientInstanceName="webDashboard" 
             OnConfigureDataConnection="ASPxDashboard1_ConfigureDataConnection">
