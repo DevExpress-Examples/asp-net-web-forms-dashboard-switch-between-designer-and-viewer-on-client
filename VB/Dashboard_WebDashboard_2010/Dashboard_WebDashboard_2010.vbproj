@@ -117,6 +117,7 @@
   <ItemGroup>
     <Content Include="App_Data\DashboardEnergyStatictics.xml" />
     <Content Include="App_Data\Dashboards\dashboard1.xml" />
+    <Content Include="Scripts\custom-script.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
