@@ -10,12 +10,12 @@ Namespace Dashboard_WebDashboard_2010
 		Inherits System.Web.UI.Page
 
 		Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
-'			#Region "#DashboardStorage"
+'			#Region "DashboardStorage"
 			Dim dashboardFileStorage As New DashboardFileStorage("~/App_Data/Dashboards")
 			ASPxDashboard1.SetDashboardStorage(dashboardFileStorage)
-'			#End Region ' #DashboardStorage
+'			#End Region "DashboardStorage"
 
-'			#Region "#DataSourceStorage"
+'			#Region "DataSourceStorage"
 			Dim sqlDataSource As New DashboardSqlDataSource("SQL Data Source", "sqlConnection")
 			Dim countriesQuery As SelectQuery = SelectQueryFluentBuilder.AddTable("Countries").SelectColumns("Country", "Latitude", "Longitude", "Year", "EnergyType", "Production", "Import").Build("Countries")
 			sqlDataSource.Queries.Add(countriesQuery)
@@ -26,7 +26,7 @@ Namespace Dashboard_WebDashboard_2010
 			dataSourceStorage.RegisterDataSource("sqlDataSource1", sqlDataSource.SaveToXml())
 			dataSourceStorage.RegisterDataSource("olapDataSource1", olapDataSource.SaveToXml())
 			ASPxDashboard1.SetDataSourceStorage(dataSourceStorage)
-'			#End Region ' #DataSourceStorage
+'			#End Region "DataSourceStorage"
 		End Sub
 
 		Protected Sub ASPxDashboard1_ConfigureDataConnection(ByVal sender As Object, ByVal e As ConfigureDataConnectionWebEventArgs)
