@@ -3,22 +3,25 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T362490)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# Dashboard for Web Forms - How to Switch between Designer and Viewer Modes
+
+This example shows how to switch between the [Web Dashboard](https://docs.devexpress.com/Dashboard/115955/web-dashboard)'s working modes on the [client-side](https://docs.devexpress.com/Dashboard/116302/web-dashboard/aspnet-web-forms-dashboard-control/client-side-api-overview).
+
+![](web-dashboard.png)
+
+- The [ASPxDashboard.ClientInstanceName](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.ASPxDashboard.ClientInstanceName) property identifies the control's client name. The [ASPxClientDashboard.GetDashboardControl](https://docs.devexpress.com/Dashboard/js-ASPxClientDashboard#js_aspxclientdashboard_getdashboardcontrol) method is used to access the [DashboardControl](https://docs.devexpress.com/Dashboard/116302/web-dashboard/aspnet-web-forms-dashboard-control/client-side-api-overview) API. 
+- The [DashboardControl.isDesignMode](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.DashboardControl#js_devexpress_dashboard_dashboardcontrol_isdesignmode) method checks whether the Web Dashboard works in designer mode.
+- The [DashboardControl.switchToDesigner](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.DashboardControl?p=netframework#js_devexpress_dashboard_dashboardcontrol_switchtodesigner) and [DashboardControl.switchToViewer](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.DashboardControl?p=netframework#js_devexpress_dashboard_dashboardcontrol_switchtoviewer) methods are used to switch between modes.
+
+## Files to Look At
 
 * [WebForm1.aspx](./CS/Dashboard_WebDashboard_2010/WebForm1.aspx) (VB: [WebForm1.aspx](./VB/Dashboard_WebDashboard_2010/WebForm1.aspx))
-* [WebForm1.aspx.cs](./CS/Dashboard_WebDashboard_2010/WebForm1.aspx.cs) (VB: [WebForm1.aspx.vb](./VB/Dashboard_WebDashboard_2010/WebForm1.aspx.vb))
-<!-- default file list end -->
-
-# Dashboard for Web Forms - How to create a Web Dashboard Designer application
-
-<p>This example shows how to create a Web Dashboard Designer application and provide data for dashboards.</p>
-The project contains a simple dashboard and two available data sources: the <a href="https://documentation.devexpress.com/#Dashboard/CustomDocument113927">XML</a> and <a href="https://documentation.devexpress.com/#Dashboard/CustomDocument114427">OLAP</a> data sources. You can use these data sources to create a new dashboard. To learn how to create a Web Designer application from scratch, see the following topic: <a href="https://documentation.devexpress.com/#Dashboard/CustomDocument115782">Creating an ASP.NET Designer and Using It to Create a Dashboard</a>.<br>
-<p><em>Note that the OLAP data source requires the ADOMD.NET data provider installed on the web server. You can get the latest version of this provider here: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=42295">https://www.microsoft.com/en-us/download/details.aspx?id=42295</a>.</em></p>
+* [custom-script.js](./CS/Dashboard_WebDashboard_2010/Scripts/custom-script.js)
 
 ## Documentation
 
-- [ASP.NET Web Forms Dashboard Control](https://docs.devexpress.com/Dashboard/16976/web-dashboard/aspnet-web-forms-dashboard-control)
+- [Client-Side API Overview for ASP.NET Web Forms Dashboard](https://docs.devexpress.com/Dashboard/116302/web-dashboard/aspnet-web-forms-dashboard-control/client-side-api-overview)
 - [Web Dashboard Technical Overview](https://docs.devexpress.com/Dashboard/119283/web-dashboard/general-information/web-dashboard-technical-overview?p=netframework)
 
 ## More Examples

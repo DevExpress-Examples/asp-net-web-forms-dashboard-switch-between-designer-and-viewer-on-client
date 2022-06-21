@@ -21,7 +21,7 @@
             ClientInstanceName="button" AutoPostBack="False">
             <ClientSideEvents Click="switchMode" />
         </dx:ASPxButton>
-        <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" Height="100%" ClientInstanceName="webDashboard" 
+        <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" Height="95%" ClientInstanceName="webDashboard" 
             OnConfigureDataConnection="ASPxDashboard1_ConfigureDataConnection">
         </dx:ASPxDashboard>
     </form>
