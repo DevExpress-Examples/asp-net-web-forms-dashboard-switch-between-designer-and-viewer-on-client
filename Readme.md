@@ -26,4 +26,4 @@ This example shows how to switch between the [Web Dashboard](https://docs.devexp
 
 ## More Examples
 
-- [Dashboard for Web Forms - How to Register Data Sources for ASP.NET Web Forms Dashboard Control](https://github.com/DevExpress-Examples/asp-net-web-forms-dashboard-register-data-sources)
+- [Dashboard for MVC - How to Switch between Designer and Viewer Modes](https://github.com/DevExpress-Examples/asp-net-mvc-dashboard-switch-between-designer-and-viewer-on-client)
