@@ -29,7 +29,7 @@ This example shows how to switch between the [Web Dashboard](https://docs.devexp
 
 - [Dashboard for MVC - How to Switch between Designer and Viewer Modes](https://github.com/DevExpress-Examples/asp-net-mvc-dashboard-switch-between-designer-and-viewer-on-client)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-dashboard-switch-between-designer-and-viewer-on-client&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-dashboard-switch-between-designer-and-viewer-on-client&~~~was_helpful=no)
 
